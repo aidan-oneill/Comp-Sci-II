@@ -1,0 +1,55 @@
+// Lauren Bricker
+// Factorial
+// A program to show how to do a cumulative "sum" - multiplication in Java
+// This program will determine the factorial from 1..6 in two different ways
+
+// Factorial.java
+// Version 2.0 
+// September 26, 2008
+// Updated September 22, 2014
+
+public class Factorial 
+{
+   /** This is the entry point into the program, where it all begins. 
+    *  
+    *  @param args  the command line arguments that are passed into the program
+    *  
+    */
+   public static void main( String[] args )
+   {
+      badFactorial();   
+      goodFactorial(); 
+   }
+  
+   /** A good way to figure out the factorial of a number
+    *  
+    */
+
+   public static void goodFactorial()
+   {
+      int result = 1;
+      for (int ii = 6; ii > 0; ii-- )
+      {
+         result *= ii; 
+
+      }
+      System.out.println( "Calculated using a loop: 6! = " + result  );
+   }
+   
+   /** A bad way to figure out the factorial of a number
+    *  
+    */
+   public static void badFactorial()
+   {
+      int nMultResult = 1;
+      nMultResult = nMultResult * 6; 
+      nMultResult = nMultResult * 5; 
+      nMultResult = nMultResult * 4; 
+      nMultResult = nMultResult * 3; 
+      nMultResult = nMultResult * 2; 
+      nMultResult = nMultResult * 1; 
+      
+      System.out.println( "Calculated by writing it out: 6! = " + nMultResult );
+   }
+
+}

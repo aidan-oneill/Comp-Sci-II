@@ -1,0 +1,66 @@
+// Lauren Bricker
+// TimesTable
+// A program to use for loops, this time using class constants
+
+// TimesTable.java
+// Version 2.0 
+// September 29, 2008
+
+
+public class TimesTable2 
+{
+  
+  /** This the minimum operand value in the times table. 
+    */
+    public static final int TABLE_MIN = 0;
+  
+  /** This the maximum operand value in the times table. 
+    */
+    public static final int TABLE_MAX = 10;
+
+  
+  /** This is the entry point into the program, where it all begins. 
+    *  
+    *  @param args  the command line arguments that are passed into the program
+    *  
+    */
+  public static void main( String[] args )
+  {
+
+    System.out.println( "Times Table" ); 
+    printHeader();
+    
+    
+    int nResult = 0;
+    // Now create the times table. The first column will be the numbers we're multiplying
+    for ( int ii = TABLE_MIN; ii <= TABLE_MAX; ii++ )
+    {
+      System.out.print(ii + " |");                           // The | line is to make it look nice. 
+      for ( int jj = TABLE_MIN; jj <= ii; jj++ )
+      {
+        nResult = ii * jj;
+        System.out.print("\t" + nResult);
+      }
+      System.out.println();
+    }
+  }
+
+  /** This is the method that prints the header depending on the max and the min class constants. . 
+    *  
+    */
+  public static void printHeader()
+  {
+    int nHeader;
+    // First print out the header line
+    for ( nHeader = TABLE_MIN; nHeader <= TABLE_MAX; nHeader++ )
+      System.out.print("\t" + nHeader);
+    System.out.println();
+
+    // Make it nice and add a line underneath
+    System.out.print("----------");
+    for ( nHeader = TABLE_MIN; nHeader <= TABLE_MAX; nHeader++ )
+     System.out.print("----------");
+    System.out.println();
+  }
+
+}

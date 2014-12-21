@@ -1,0 +1,45 @@
+// Lauren Bricker
+// DistanceCalculator
+// a Class that will determine the distance between two pre-defined points. 
+// For now these points are statically defined. Soon we will know how to accept command line input. 
+
+// DistanceCalculator2.java
+// Version 2.0 
+// October 6, 2008
+
+public class DistanceCalculator2
+{
+  /** This is the entry point into the program, where it all begins. 
+    *  
+    *  @param args  the command line arguments that are passed into the program
+    *  
+    */
+  public static void main(String[] args) 
+  {
+    int X1 = 100; 
+    int Y1 = 43;
+    int X2 = 39; 
+    int Y2 = 23;
+  
+    System.out.println("The distance between (" + X1 + ", " + Y1 + ") and (" + X2 + ", " + Y2 + ") is: " + CalculateDistance( X1, Y1, X2, Y2) );
+  }
+  
+  /** This method takes four variables x1, y1, x2, and y2 and determines the distance between the two points in the plane
+    * The value is returned as a double
+    * 
+    *  @param X1 the x coordinate of point 1
+    *  @param Y1 the y coordinate of point 1
+    *  @param X2 the x coordinate of point 2
+    *  @param Y2 the y coordinate of point 2
+    *  @return The distance between the two points in the cartesian plane.
+    */
+  public static double CalculateDistance( int X1, int Y1, int X2, int Y2) 
+  {
+    // declare variables
+    int nXDistance = X2 - X1;
+    int nYDistance = Y2 - Y1;
+
+    // Now compute the distance. 
+    return Math.sqrt( nXDistance * nXDistance + nYDistance * nYDistance );
+  }
+}
