@@ -1,4 +1,5 @@
 Comp-Sci-II
 ===========
-
-Computer Science II
+Aidan O'Neill
+Lakeside School 
+Computer Science II course
